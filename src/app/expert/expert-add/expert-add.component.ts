@@ -14,8 +14,8 @@ export class ExpertAddComponent implements OnInit {
 
   @ViewChild('formAddExpert') formElement: ElementRef<HTMLFormElement>;
   @ViewChild('expertList') expertList: ExpertFindByNameComponent;
-  private expert: Expert;
-  private formGroup: FormGroup;
+  expert: Expert;
+  formGroup: FormGroup;
 
   constructor(private fb: FormBuilder, private expertService: ExpertControllerService,
     private flashMessagesService: FlashMessagesService) {

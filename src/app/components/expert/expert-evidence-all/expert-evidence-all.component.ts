@@ -10,9 +10,9 @@ import { Expert, EvidenceSourceInput, PhysicalEvidence } from 'src/app/api/model
 })
 export class ExpertEvidenceAllComponent implements OnInit {
 
-  private evidences: PhysicalEvidence[]; 
-  private page = 1;
-  private pageSize = 10;
+  evidences: PhysicalEvidence[]; 
+  page = 1;
+  pageSize = 10;
 
   private _expert: Expert;
   @Input() set expert(value: Expert) {

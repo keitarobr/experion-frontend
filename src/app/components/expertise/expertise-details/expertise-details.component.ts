@@ -44,4 +44,8 @@ export class ExpertiseDetailsComponent implements OnInit {
   ngOnInit() {
   }
 
+  getExpertiseDetails() {
+    return this.expertiseDetails;
+  }
+
 }

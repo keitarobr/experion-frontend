@@ -10,7 +10,7 @@ import { Expertise, Expert } from 'src/app/api/models';
 })
 export class ExpertExpertiseAllComponent implements OnInit {
 
-  private expertises: Observable<Expertise[]>;  
+  expertises: Observable<Expertise[]>;  
   private _expert: Expert;  
 
   @Input() set expert(value: Expert) {

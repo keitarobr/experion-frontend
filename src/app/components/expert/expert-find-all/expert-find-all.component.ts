@@ -14,9 +14,9 @@ export class ExpertFindAllComponent implements OnInit {
   }
 
   page = 1;
-  private experts: Expert[];
-  private pageSize = 10;
-  private filter = "";
+  experts: Expert[];
+  pageSize = 10;
+  filter = "";
 
   constructor(private expertService: ExpertControllerService) { }
 

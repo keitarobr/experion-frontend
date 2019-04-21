@@ -8,7 +8,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let evidence of evidencePage">
+      <tr *ngFor="let evidence of evidencePage()">
         <td>{{evidence.input.name}}</td>
         <td>{{evidence.language}}</td>
         <td>{{evidence.keywords | join: ', '}}</td>

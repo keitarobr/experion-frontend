@@ -9,10 +9,10 @@ import { LogicalEvidence, Expert } from 'src/app/api/models';
 })
 export class ExpertLogicalEvidenceAllComponent implements OnInit {
 
-  private evidences: LogicalEvidence[];
+  evidences: LogicalEvidence[];
   private _expert: Expert;
-  private page = 1;
-  private pageSize = 10;
+  page = 1;
+  pageSize = 10;
 
   @Input() set expert(value: Expert) {
     this._expert = value;

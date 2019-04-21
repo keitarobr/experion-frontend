@@ -9,13 +9,13 @@
         </div>
       </ng-template>
       <ng-template ngbPanelContent>
-        <div style="white-space: pre; ">{{(expertiseDetails | async)?.expertise}}</div>
+        <div style="white-space: pre; ">{{(getExpertiseDetails() | async)?.expertise}}</div>
       </ng-template>
     </ngb-panel>
   </ngb-accordion>
 
   <ngb-accordion>
-    <ngb-panel *ngFor="let le of (expertiseDetails | async)?.logicalEvidences; index as i" id="{{'le-panel-' + i}}">
+    <ngb-panel *ngFor="let le of (getExpertiseDetails() | async)?.logicalEvidences; index as i" id="{{'le-panel-' + i}}">
       <ng-template ngbPanelHeader let-opened="opened">
         <div class="container">
           <h6 class="m-0">Logical evidence:</h6> 

@@ -11,11 +11,11 @@ import { PhysicalEvidence, Expert, EvidenceSourceInput } from 'src/app/api/model
 export class ExpertEvidenceInputComponent implements OnInit {
 
 
-  private evidences: PhysicalEvidence[];
+  evidences: PhysicalEvidence[];
   private _expert: Expert;
   private _inputs: EvidenceSourceInput[];
-  private page = 1;
-  private pageSize = 10;
+  page = 1;
+  pageSize = 10;
 
 
 

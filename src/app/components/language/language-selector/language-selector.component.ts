@@ -48,5 +48,8 @@ export class LanguageSelectorComponent implements OnInit, ControlValueAccessor {
     this.valueChange.emit(obj);
   }
 
+  availableLanguages() {
+    return this.languageService.availableLanguages();
+  }
 
 }
