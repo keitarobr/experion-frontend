@@ -1,0 +1,8 @@
+<div class="container-fluid">
+  <h1>Generate expert expertise</h1>
+  <form [formGroup]="formGroup" #formGenerateExpertise>
+    <exp-expert-selector formControlName="expert"></exp-expert-selector>
+    <exp-expertise-generator-selector formControlName="generator"></exp-expertise-generator-selector>
+    <button type="submit" class="btn btn-primary" (click)="generateExpertise()">Generate expertise</button>
+  </form>
+</div>

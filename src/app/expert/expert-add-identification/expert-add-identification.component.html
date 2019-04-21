@@ -1,0 +1,14 @@
+<div class="container-fluid">
+  <h1>Add identification to expert</h1>
+  <form class="mb-5" [formGroup]="formGroup" #formAddExpert>
+    <exp-expert-selector [value]="selectedExpert" formControlName="expert"></exp-expert-selector>
+    <exp-source-selector [value]="selectedSource" formControlName="source"></exp-source-selector>
+    <div class="form-group">
+      <label for="expertId">Expert ID in source:</label>
+      <input class="form-control" formControlName="identification" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="addExpertIdentification()">Add identification</button>
+  </form>
+  <exp-expert-identifications [expert]="formGroup.controls.expert.value" #identificationList>
+  </exp-expert-identifications>
+</div>

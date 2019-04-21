@@ -1,0 +1,7 @@
+<div class="form-group">
+  <label for="selExpert">Expert:</label>
+  <select [(ngModel)]="value" class="form-control">
+    <option [ngValue]="null"></option>
+    <option *ngFor="let expert of (filteredExperts | async)" [ngValue]="expert">{{expert.name}} ({{expert.identification}})</option>
+  </select>
+</div>

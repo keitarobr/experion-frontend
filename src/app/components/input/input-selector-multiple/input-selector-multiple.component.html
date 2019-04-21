@@ -1,0 +1,8 @@
+<div class="form-group">
+    <label for="selInputs">Inputs:</label>
+    <select class="form-control" id="selInputs" [(ngModel)]="value" multiple placeholder="Inputs" #list multiple>
+        <option *ngFor="let input of (inputs$ | async)" [ngValue]="input">
+            {{input.name}}
+        </option>
+    </select>
+</div>

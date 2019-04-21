@@ -1,0 +1,24 @@
+<div class="container-fluid">
+  <h1>Generate expert profile</h1>
+  <form [formGroup]="formGroup" #formGenerateProfile>
+    <exp-expert-selector formControlName="expert"></exp-expert-selector>
+    <exp-profile-generator-selector formControlName="generator"></exp-profile-generator-selector>
+    <button type="submit" mat-raised-button (click)="generateProfile()">Generate profile</button>
+  </form>
+
+  <div id="accordion">
+    <div class="card" *ngFor="let profile of profiles">
+      <div class="card-header" id="headingOne">
+        <h5 class="mb-0">
+          Generated profile
+        </h5>
+      </div>
+
+      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+        <div class="card-body">
+          {{profile.description}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

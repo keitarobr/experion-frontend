@@ -1,0 +1,49 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Experion</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <!-- <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li> -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Expert
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" routerLink="add-expert"><span class="icon"><i class="fa fa-user fa-fw"></i></span>Manage experts</a>
+          <a class="dropdown-item" routerLink="add-expert-identification"><span class="icon"><i class="fa fa-portrait fa-fw"></i></span>Manage identifications</a>
+          <a class="dropdown-item" routerLink="collect-expert-evidences"><span class="icon"><i class="fa fa-search fa-fw"></i></span>Collect evidences</a>
+          <a class="dropdown-item" routerLink="generate-expert-logical-evidences"><span class="icon"><i class="fa fa-list-ul fa-fw"></i></span>Generate logical evidences</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" routerLink="generate-expert-expertise"><span class="icon"><i class="fa fa-searchengin  fa-fw"></i></span>Generate expertise</a>
+          <a class="dropdown-item" routerLink="generate-expert-profile"><span class="icon"><i class="fa fa-id-card fa-fw"></i></span>Generate expert profile</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" routerLink="expertise-browser"><span class="icon"><i class="fa fa-eye fa-fw"></i></span>Browse expertise</a>
+        </div>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Sources
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" routerLink="source-find-expert">Find experts by name</a>
+        </div>
+      </li>
+    </ul>
+    <div class="float-right">
+      <button class="btn btn-dark" [routerLink]="['logout']" *ngIf="loggedUser()">Logout</button>
+      <button class="btn btn-dark" [routerLink]="['login']" *ngIf="! loggedUser()">Login</button>
+    </div>
+  </div>
+</nav>
+<flash-messages></flash-messages>

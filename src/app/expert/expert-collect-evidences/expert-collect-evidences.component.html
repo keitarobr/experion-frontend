@@ -1,0 +1,13 @@
+<div class="container-fluid">
+  <h1>Collect expert evidences</h1>
+
+  <form class="mb-5" [formGroup]="formGroup" #formCollectEvidence>
+    <exp-expert-selector formControlName="expert"></exp-expert-selector>
+    <exp-language-selector formControlName="language"></exp-language-selector>
+    <exp-input-selector-multiple formControlName="input"></exp-input-selector-multiple>
+    <button type="submit" class="btn btn-primary" (click)="collectEvidences()">Collect evidences</button>
+  </form>
+
+  <exp-expert-evidence-input *ngIf="selectedExpert" [expert]="selectedExpert" [inputs]="selectedInputs">
+  </exp-expert-evidence-input>
+</div>

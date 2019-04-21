@@ -1,0 +1,6 @@
+<div class="form-group">
+  <label for="genSelector">Generator: </label>
+  <select class="form-control" id="genSelector" placeholder="Generator" [(ngModel)]="value">
+    <option *ngFor="let generator of (generators$ | async)" [ngValue]="generator">{{generator.name}}</option>
+  </select>
+</div>

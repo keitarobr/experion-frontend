@@ -1,0 +1,18 @@
+<div class="container-fluid">
+  <table class="table table-hover table-sm">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Identification</th>
+        <th>Commands</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let id of ids">
+        <td>{{id.source.name}}</td>
+        <td>{{id.identification}}</td>
+        <td><i class="fa fa-trash" (click)="deleteIdentification(id)"></i></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,15 @@
+<div class="container-fluid">
+    <h1 class="md-display-4">Add a new expert</h1>
+    <form class="mb-5" [formGroup]="formGroup" #formAddExpert>
+        <div class="form-group">
+            <label for="id">Identification:</label>
+            <input class="form-control" id="id" placeholder="Expert ID (CPF, Passport, etc.)" formControlName="identification" />
+          </div>
+          <div class="form-group">
+              <label for="name">Name:</label>
+              <input class="form-control" id="name" placeholder="Expert full name" formControlName="name" />
+            </div>
+      <button type="submit" class="btn btn-primary" (click)="addExpert()">Add expert</button>
+    </form>
+    <exp-expert-find-by-name #expertList></exp-expert-find-by-name>
+</div>

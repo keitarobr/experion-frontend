@@ -1,0 +1,7 @@
+<div class="form-group">
+  <select class="form-control" [(ngModel)]="value">
+      <option *ngFor="let language of languageService.availableLanguages()" [ngValue]="language">
+          {{language.name}}
+        </option>
+  </select>
+</div>

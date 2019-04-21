@@ -1,0 +1,8 @@
+<div class="container-fluid">
+    <h1>Browse expert expertise</h1>
+
+    <form [formGroup]="formGroup">
+        <exp-expert-selector formControlName="expert"></exp-expert-selector>
+    </form>
+    <exp-expert-expertise-all *ngIf="selectedExpert" [expert]="selectedExpert"></exp-expert-expertise-all>
+</div>

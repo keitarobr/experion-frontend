@@ -1,0 +1,86 @@
+<div class="container-fluid">
+
+  <ngb-accordion activeIds="custom-panel-1">
+    <ngb-panel id="custom-panel-1">
+      <ng-template ngbPanelHeader let-opened="opened">
+        <div class="d-flex align-items-center justify-content-between">
+          <h6 class="m-0">Expertise description</h6>
+          <button ngbPanelToggle class="btn btn-link p-0">Hide/Show</button>
+        </div>
+      </ng-template>
+      <ng-template ngbPanelContent>
+        <div style="white-space: pre; ">{{(expertiseDetails | async)?.expertise}}</div>
+      </ng-template>
+    </ngb-panel>
+  </ngb-accordion>
+
+  <ngb-accordion>
+    <ngb-panel *ngFor="let le of (expertiseDetails | async)?.logicalEvidences; index as i" id="{{'le-panel-' + i}}">
+      <ng-template ngbPanelHeader let-opened="opened">
+        <div class="container">
+          <h6 class="m-0">Logical evidence:</h6> 
+          <span class="row">{{le.concept}}</span>
+          <button ngbPanelToggle class="btn btn-link p-0">Hide/Show</button>
+        </div>
+      </ng-template>
+      <ng-template ngbPanelContent>
+        <ng-container *ngFor="let pe of le.physicalEvidences">
+          <div class="row" style="margin-left: 10px; word-wrap:break-word;white-space: pre;">
+            <div class="row" style="word-wrap:break-word">
+              <span style="word-wrap:break-word">Physical evidence: </span>
+              {{pe.evidence}}
+            </div>
+            <div style="margin-top: 30px; height: 400px; overflow: scroll">
+              <span>Retrieved data: </span>
+              <div>
+                {{pe.retrievedData}}</div>
+            </div>
+          </div>
+        </ng-container>
+      </ng-template>
+    </ngb-panel>
+  </ngb-accordion>
+
+
+</div>
+<!-- <div id="accordion-expertise">
+    <div class="card">
+      <div class="card-header" id="heading-expertise">
+        <h6 class="mb-0">
+
+        </h6>
+      </div>
+      <div id="accordion-expertise-body" class="collapsed show" aria-labelledby="heading-expertise"
+        data-parent="#accordion-expertise">
+        <div class="card-body"> -->
+
+
+<!-- <div class="card" *ngFor="let le of (expertiseDetails | async)?.logicalEvidences">
+            <div class="card-header" id="headingOne">
+              <h6 class="mb-0">
+                Logical evidence: {{le.concept}}
+              </h6>
+            </div>
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+              <div class="card-body">
+
+                <ng-container *ngFor="let pe of le.physicalEvidences">
+                  <div class="row" style="margin-left: 10px; word-wrap:break-word;white-space: pre;">
+                    <div class="row" style="word-wrap:break-word">
+                      <span class="mat-body-strong" style="word-wrap:break-word">Physical evidence: </span>
+                      {{pe.evidence}}
+                    </div>
+                    <div style="margin-top: 30px; height: 400px; overflow: scroll">
+                      <span class="mat-body-strong">Retrieved data: </span>
+                      <div>
+                        {{pe.retrievedData}}</div>
+                    </div>
+                  </div>
+                </ng-container>
+              </div>
+            </div>
+          </div> -->
+<!-- </div>
+      </div>
+    </div>
+  </div> -->

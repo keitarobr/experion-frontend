@@ -1,0 +1,5 @@
+<div class="form-group">
+  <select class="form-control" placeholder="Source" [(ngModel)]="value">
+    <option *ngFor="let source of (sources$ | async)" [ngValue]="source">{{source.name}}</option>
+  </select>
+</div>

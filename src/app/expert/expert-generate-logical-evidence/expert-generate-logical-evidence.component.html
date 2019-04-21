@@ -1,0 +1,15 @@
+<div class="container-fluid">
+  <h1>Generate logical evidence</h1>
+  <form class="mb-5" [formGroup]="formGroup" #formCollectEvidence>
+    <exp-expert-selector formControlName="expert"></exp-expert-selector>
+    <exp-logical-evidence-generator-selector formControlName="generator"></exp-logical-evidence-generator-selector>
+    <exp-input-selector-multiple formControlName="inputs"></exp-input-selector-multiple>
+    <exp-language-selector formControlName="language"></exp-language-selector>
+    <button type="submit" class="btn btn-primary" (click)="generateEvidences()">Generate evidences</button>
+  </form>
+  <h2 *ngIf="selectedExpert">Logical evidences</h2>
+  <exp-expert-logical-evidence-all *ngIf="selectedExpert" [expert]="selectedExpert"></exp-expert-logical-evidence-all>
+  <h2 class="mt-5"  *ngIf="selectedExpert">Collected evidences (physical)</h2>
+  <exp-expert-evidence-input *ngIf="selectedExpert" [expert]="selectedExpert" [inputs]="selectedInputs">
+  </exp-expert-evidence-input>
+</div>
